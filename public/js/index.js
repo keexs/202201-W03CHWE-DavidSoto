@@ -1,7 +1,10 @@
 import PokemonCard from "./Components/Card.js";
+import PageComponent from "./Components/PageComponent.js";
+
+new PageComponent(document.body);
 
 const start = 1;
-const finish = 100;
+const finish = 20;
 
 for (let i = start; i <= finish; i++) {
   const pokemonID = i;
@@ -11,11 +14,8 @@ for (let i = start; i <= finish; i++) {
       `https://pokeapi.co/api/v2/pokemon/${pokemonID.toString()}`
     );
     const pokemonObject = await pokemonArray.json();
-    console.log(pokemonObject);
 
-    new PokemonCard(document.body, "div", pokemonObject);
+    new PokemonCard("div", pokemonObject);
   };
   pokemonAPI();
 }
-
-// pokemonAPI();

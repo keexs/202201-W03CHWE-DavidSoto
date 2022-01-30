@@ -1,2 +1,32 @@
+.pokemonCard {
+  display: flex;
+  background-color: grey;
+  border-radius: 33px;
+  height: 100px;
+  width: 200px;
+  border-style: dashed solid;
+}
 
+.pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
+.pokemonInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 108, 108);
+  border-radius: 33px;
+  padding-left: 10px;
+  height: 100px;
+  width: 94px;
+}
+
+.pokemonInfo > * {
+  margin: 0;
+  padding-top: 7px;
+}

@@ -1,11 +1,15 @@
 import Component from "./Component.js";
+import PokemonListGenerator from "./PokemonListGenerator.js";
 
+const start = 1;
+const end = 20;
 // eslint-disable-next-line no-unused-vars
 class PageComponent extends Component {
   constructor(parentElement) {
     super(parentElement, "page");
 
     this.drawPage();
+    this.renderPokemonList();
   }
 
   drawPage() {
@@ -26,6 +30,14 @@ class PageComponent extends Component {
     <footer>
       <h2>davidpokeprah</h2>
     </footer>`;
+  }
+
+  renderPokemonList() {
+    this.renderPokemonList = new PokemonListGenerator(
+      document.querySelector(".pokemonList"),
+      start,
+      end
+    );
   }
 }
 

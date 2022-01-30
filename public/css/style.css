@@ -4,7 +4,14 @@
   border-radius: 33px;
   height: 100px;
   width: 200px;
-  border-style: dashed solid;
+  margin: 10px;
+  box-shadow: 5px 5px 5px rgb(48, 48, 48);
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pokemonList {
@@ -24,9 +31,17 @@
   padding-left: 10px;
   height: 100px;
   width: 94px;
+  box-shadow: inset 3px 2px 3px rgb(58, 58, 58);
 }
 
 .pokemonInfo > * {
   margin: 0;
   padding-top: 7px;
+}
+
+.pokemonShadow {
+  height: 3px;
+  width: 50px;
+  background-color: black;
+  margin: 0;
 }

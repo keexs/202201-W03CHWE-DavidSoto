@@ -15,7 +15,11 @@ for (let i = start; i <= finish; i++) {
     );
     const pokemonObject = await pokemonArray.json();
 
-    new PokemonCard("div", pokemonObject);
+    new PokemonCard(
+      document.querySelector(".pokemonList"),
+      "div",
+      pokemonObject
+    );
   };
   pokemonAPI();
 }

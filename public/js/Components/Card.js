@@ -4,8 +4,8 @@ import Component from "./Component.js";
 class PokemonCard extends Component {
   pokemon;
 
-  constructor(parentElement, htmlTag, pokemon) {
-    super(parentElement, "pokemonCard", htmlTag);
+  constructor(htmlTag, pokemon) {
+    super(document.querySelector(".pokemonList"), "pokemonCard", htmlTag);
 
     this.pokemon = pokemon;
     this.getDrawHtml();
@@ -13,9 +13,9 @@ class PokemonCard extends Component {
 
   getDrawHtml() {
     this.element.innerHTML = `
-    <div>
+    <div class="pokemonCard">
       <img src="${this.pokemon.sprites.front_default}" alt="">
-      <div>
+      <div class="pokemonInfo">
         <h3>ID: ${this.pokemon.id}</h3>
         <h4>${this.pokemon.name}</h4>
       </div>
